@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Dark grey */
+    color: #f4f4f4; /* Light text */
+}
+
+header {
+    background-color: #2b2b2b; /* Slightly lighter dark grey */
+    color: #f4f4f4;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 20px; /* Increased space below the title */
+}
+
+header nav {
+    margin-top: 10px; /* Additional space above the navigation tabs */
+}
+
+header nav a {
+    color: #f9d71c; /* Dark yellow */
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #ffc107; /* Brighter yellow for hover effect */
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #2b2b2b; /* Matches header */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    color: #f9d71c; /* Dark yellow */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Game Review Boxes */
+article {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #3c3c3c; /* Darker grey border */
+    border-radius: 5px;
+    background: #1e1e1e; /* Matches body */
+}
+
+article h3 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Space between title and description */
+    color: #f9d71c;
+}
+
+/* Profile Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #3c3c3c; /* Dark grey */
+    border-radius: 4px;
+    background: #2b2b2b; /* Lighter dark grey */
+    color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #f9d71c; /* Dark yellow */
+    background: #333333; /* Slightly brighter on focus */
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #f9d71c;
+    color: #1e1e1e; /* Dark grey for contrast */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ffc107; /* Brighter yellow */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2b2b2b;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        margin: 5px;
+    }
+}
