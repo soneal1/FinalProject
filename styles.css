@@ -8,11 +8,99 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b2b2b;
+    padding: 15px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #f4f4f4;
+}
+
+.menu {
+    position: relative;
+}
+
+/* Hide the actual checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+/* Style the hamburger icon */
+.menu-icon {
+    font-size: 24px;
+    color: #f9d71c; /* Dark yellow */
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f9d71c; /* Dark yellow */
+    color: #1e1e1e; /* Dark grey */
+}
+
+/* Show the dropdown when checkbox is checked */
+.menu-checkbox:checked ~ .dropdown-menu {
+    display: block;
+}
+
+
+/* Adjust header layout */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #2b2b2b;
+    color: white;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+
+header {
     background-color: #2b2b2b; /* Slightly lighter dark grey */
     color: #f4f4f4;
     text-align: center;
     padding: 1rem 0;
 }
+
+section.intro {
+    text-align: center; /* Centers the text horizontally */
+    margin: 20px auto; /* Adds spacing around the section */
+    max-width: 800px; /* Optional: Limits the width for better readability */
+    padding: 20px; /* Optional: Adds some padding */
+}
+
 
 header h1 {
     margin: 0;
