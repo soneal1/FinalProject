@@ -224,3 +224,77 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
+
+
+/* Profile Form Section */
+.profile-form {
+    padding: 20px;
+    background: #2b2b2b; /* Matches site theme */
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #f4f4f4;
+}
+
+.profile-form h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #f9d71c; /* Dark yellow */
+    margin-bottom: 20px;
+}
+
+.profile-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f4f4f4;
+    margin-bottom: 5px;
+}
+
+.profile-form input,
+.profile-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #3c3c3c; /* Dark grey border */
+    border-radius: 4px;
+    background: #1e1e1e; /* Matches dark theme */
+    color: #f4f4f4;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+    outline: none;
+    border-color: #f9d71c; /* Highlight focus with yellow */
+    background: #333333; /* Slightly brighter background on focus */
+}
+
+.profile-form textarea {
+    height: 100px; /* Adjust textarea height */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.profile-form button {
+    background-color: #f9d71c; /* Dark yellow */
+    color: #1e1e1e; /* Dark grey for contrast */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.profile-form button:hover {
+    background-color: #ffc107; /* Brighter yellow on hover */
+}
