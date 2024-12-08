@@ -1,6 +1,6 @@
 /* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Kanit;
     margin: 0;
     padding: 0;
     background-color: #1e1e1e; /* Dark grey */
@@ -14,16 +14,26 @@ header {
     align-items: center;
     background-color: #2b2b2b;
     padding: 15px 20px;
-    position: relative;
-    color: white;
+    position: sticky; /* Keeps the header visible during scrolling */
+    top: 0; /* Sticks the header to the top */
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Optional shadow for better visibility */
 }
 
+/* Optional: Reduce header size for a sleek sticky design */
 header h1 {
+    font-size: 1.5rem; /* Adjust font size to fit the sticky bar */
     margin: 0;
-    font-size: 2rem;
     color: #f4f4f4;
-    margin-bottom: 20px; /* Increased space below the title */
 }
+
+.menu {
+    position: fixed; /* Keeps the menu in the top-right corner */
+    top: 15px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1100; /* Ensures it's above all other elements */
+}
+
 
 header nav {
     margin-top: 10px; /* Additional space above the navigation tabs */
@@ -42,7 +52,10 @@ header nav a:hover {
 
 /* Hamburger Menu */
 .menu {
-    position: relative;
+    position: fixed; /* Keeps the menu in the top-right corner */
+    top: 15px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1100; /* Ensures it's above all other elements */
 }
 
 .menu-checkbox {
@@ -57,9 +70,9 @@ header nav a:hover {
 }
 
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 40px;
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the menu */
+    top: 40px; /* Below the hamburger icon */
     right: 0;
     background-color: #2b2b2b;
     border-radius: 8px;
@@ -94,6 +107,7 @@ header nav a:hover {
     max-width: 900px; /* Center the section */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     color: #f4f4f4; /* Light text */
+    font-family: Kanit;
 }
 
 .featured-games h2 {
@@ -109,12 +123,6 @@ header nav a:hover {
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.featured-games .game:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 .featured-games .game h3 {
@@ -140,10 +148,17 @@ header nav a:hover {
     padding: 100px 20px;
 }
 
+/* Hero Title Styling */
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    font-size: 3.5rem; 
+    font-weight: 800; 
+    color: #f9d71c; 
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7), 0 0 10px #f9d71c; 
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 2px; 
+    font-family: 'Montserrat', Arial, sans-serif; 
 }
 
 
@@ -154,10 +169,11 @@ header nav a:hover {
 /* Story Cards Section */
 .story-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
     background: #2b2b2b; /* Slightly lighter dark grey */
+    font-weight: bold;
     text-align: center;
 }
 
@@ -169,23 +185,26 @@ header nav a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* make care bounce on  hover */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ensure the image spans the full width of the card */
+    height: 500px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image scales properly to fit within the height */
     display: block;
 }
 
+
 .card h3 {
     padding: 13px;
-    font-size: 1rem; /* Smaller font size for minimal design */
+    font-size: 1.3rem; /* Smaller font size for minimal design */
     color: #f9d71c; /* Dark yellow */
     font-family: 'Helvetica'; /* Thin and clean font */
-    font-weight: 300; /* Lighter font weight */
+    font-weight: bold; /* Lighter font weight */
     text-align: center; /* Center-align text for balance */
      /* Adds breathing space between lines */
     text-transform: none; /* Keeps text in natural case */
@@ -200,6 +219,40 @@ section.intro {
     padding: 20px; /* Optional: Adds some padding */
     font-size: 22px;
 }
+
+/* Section Title Styling */
+.section-title {
+    font-size: 2rem; /* Large font size */
+    font-weight: bold; /* Bold text */
+    color: #f9d71c; /* Dark yellow for contrast */
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Add space between the title and the cards */
+    text-transform: uppercase; /* Optional: Makes the text all uppercase */
+    letter-spacing: 1px; /* Optional: Adds spacing between letters */
+    padding-top: 20px;
+}
+
+/* General link styles */
+a {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Inherit the text color */
+}
+
+/* Styling for unvisited and visited links */
+a:link,
+a:visited {
+    text-decoration: none; /* Remove underline for both states */
+    color: #f9d71c; /* Dark yellow color */
+}
+
+/* Add hover effect */
+a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover for emphasis */
+    color: #ffc107; /* Brighter yellow */
+}
+
+
+
 
 /* Footer Styling */
 footer {
@@ -223,6 +276,7 @@ footer {
     .story-cards {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+    
 }
 
 
@@ -235,6 +289,7 @@ footer {
     margin: 20px auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     color: #f4f4f4;
+    font-family: Kanit;
 }
 
 .profile-form h2 {
@@ -242,6 +297,7 @@ footer {
     font-size: 1.8rem;
     color: #f9d71c; /* Dark yellow */
     margin-bottom: 20px;
+    font-family: Kanit;
 }
 
 .profile-form form {
@@ -255,6 +311,7 @@ footer {
     font-weight: bold;
     color: #f4f4f4;
     margin-bottom: 5px;
+    font-family: Kanit;
 }
 
 .profile-form input,
@@ -272,8 +329,7 @@ footer {
 
 .profile-form input:focus,
 .profile-form textarea:focus {
-    outline: none;
-    border-color: #f9d71c; /* Highlight focus with yellow */
+    outline: none; /* Highlight focus with yellow */
     background: #333333; /* Slightly brighter background on focus */
 }
 
