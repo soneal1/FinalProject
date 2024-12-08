@@ -3,37 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameReview - Games</title>
+    <title>GameReview - Featured Games</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>GameReview</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="games.html">Games</a>
-            <a href="profile.html">Profile</a>
-        </nav>
+        <div class="menu">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <nav class="dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section>
+        <!-- Featured Games Section -->
+        <section class="featured-games">
             <h2>Featured Games</h2>
-            <article>
+            <div class="game">
                 <h3>Game Title 1</h3>
                 <p>Description: An exciting open-world sci-fi adventure game.</p>
                 <p>Rating: 4.5/5</p>
                 <p>User Review: "Absolutely loved the gameplay and story!"</p>
-            </article>
-            <article>
+            </div>
+            <div class="game">
                 <h3>Game Title 2</h3>
                 <p>Description: A challenging strategy game with a rich lore.</p>
                 <p>Rating: 4.2/5</p>
                 <p>User Review: "Great for players who enjoy complex mechanics."</p>
-            </article>
+            </div>
+            <div class="game">
+                <h3>Game Title 3</h3>
+                <p>Description: A fast-paced first-person shooter with stunning visuals.</p>
+                <p>Rating: 4.7/5</p>
+                <p>User Review: "An adrenaline rush from start to finish!"</p>
+            </div>
+            <div class="game">
+                <h3>Game Title 4</h3>
+                <p>Description: A heartwarming indie game with a touching story.</p>
+                <p>Rating: 4.8/5</p>
+                <p>User Review: "A masterpiece of storytelling and art."</p>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 GameReview</p>
+        <p>&copy; 2024 GameReview. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

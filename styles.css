@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,30 +7,48 @@ body {
     color: #f4f4f4; /* Light text */
 }
 
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #2b2b2b;
     padding: 15px 20px;
+    position: relative;
+    color: white;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #f4f4f4;
+    margin-bottom: 20px; /* Increased space below the title */
 }
 
+header nav {
+    margin-top: 10px; /* Additional space above the navigation tabs */
+}
+
+header nav a {
+    color: #f9d71c; /* Dark yellow */
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #ffc107; /* Brighter yellow for hover effect */
+}
+
+/* Hamburger Menu */
 .menu {
     position: relative;
 }
 
-/* Hide the actual checkbox */
 .menu-checkbox {
-    display: none;
+    display: none; /* Hide the actual checkbox */
 }
 
-/* Style the hamburger icon */
 .menu-icon {
     font-size: 24px;
     color: #f9d71c; /* Dark yellow */
@@ -38,7 +56,6 @@ header h1 {
     user-select: none; /* Prevent text selection */
 }
 
-/* Dropdown Menu Styling */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -64,145 +81,127 @@ header h1 {
     color: #1e1e1e; /* Dark grey */
 }
 
-/* Show the dropdown when checkbox is checked */
 .menu-checkbox:checked ~ .dropdown-menu {
+    display: block; /* Show the dropdown when checkbox is checked */
+}
+
+/* Featured Games Section */
+.featured-games {
+    padding: 20px;
+    background: #2b2b2b; /* Matches the site theme */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 900px; /* Center the section */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    color: #f4f4f4; /* Light text */
+}
+
+.featured-games h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #f9d71c; /* Dark yellow */
+}
+
+.featured-games .game {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-games .game:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.featured-games .game h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+    color: #f9d71c; /* Dark yellow */
+    text-align: left;
+}
+
+.featured-games .game p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f4f4f4;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2024/08/perifericos-gaming-3860923.jpg?tf=3840x') center/cover no-repeat;
+    text-align: center;
+    color: #f9d71c;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+.hero button:hover {
+    background: #f9d71c;
+}
+
+/* Story Cards Section */
+.story-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: #2b2b2b; /* Slightly lighter dark grey */
+    text-align: center;
+}
+
+.card {
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
     display: block;
 }
 
-
-/* Adjust header layout */
-header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: #2b2b2b;
-    color: white;
-}
-
-header h1 {
-    font-size: 1.8rem;
+.card h3 {
+    padding: 13px;
+    font-size: 1rem; /* Smaller font size for minimal design */
+    color: #f9d71c; /* Dark yellow */
+    font-family: 'Helvetica'; /* Thin and clean font */
+    font-weight: 300; /* Lighter font weight */
+    text-align: center; /* Center-align text for balance */
+     /* Adds breathing space between lines */
+    text-transform: none; /* Keeps text in natural case */
     margin: 0;
 }
 
-
-header {
-    background-color: #2b2b2b; /* Slightly lighter dark grey */
-    color: #f4f4f4;
-    text-align: center;
-    padding: 1rem 0;
-}
-
+/* Intro Section */
 section.intro {
     text-align: center; /* Centers the text horizontally */
     margin: 20px auto; /* Adds spacing around the section */
     max-width: 800px; /* Optional: Limits the width for better readability */
     padding: 20px; /* Optional: Adds some padding */
+    font-size: 22px;
 }
 
-
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    margin-bottom: 20px; /* Increased space below the title */
-}
-
-header nav {
-    margin-top: 10px; /* Additional space above the navigation tabs */
-}
-
-header nav a {
-    color: #f9d71c; /* Dark yellow */
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav a:hover {
-    color: #ffc107; /* Brighter yellow for hover effect */
-}
-
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #2b2b2b; /* Matches header */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-}
-
-h2 {
-    color: #f9d71c; /* Dark yellow */
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-/* Game Review Boxes */
-article {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #3c3c3c; /* Darker grey border */
-    border-radius: 5px;
-    background: #1e1e1e; /* Matches body */
-}
-
-article h3 {
-    margin-top: 0;
-    margin-bottom: 10px; /* Space between title and description */
-    color: #f9d71c;
-}
-
-/* Profile Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form label {
-    font-weight: bold;
-}
-
-form input, form textarea {
-    padding: 10px;
-    border: 1px solid #3c3c3c; /* Dark grey */
-    border-radius: 4px;
-    background: #2b2b2b; /* Lighter dark grey */
-    color: #f4f4f4;
-    box-sizing: border-box;
-}
-
-form input:focus, form textarea:focus {
-    outline: none;
-    border-color: #f9d71c; /* Dark yellow */
-    background: #333333; /* Slightly brighter on focus */
-}
-
-form textarea {
-    height: 100px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #f9d71c;
-    color: #1e1e1e; /* Dark grey for contrast */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-form button:hover {
-    background-color: #ffc107; /* Brighter yellow */
-}
-
-/* Footer Styles */
+/* Footer Styling */
 footer {
     background-color: #2b2b2b;
     color: #f4f4f4;
@@ -219,5 +218,9 @@ footer {
 
     header nav a {
         margin: 5px;
+    }
+
+    .story-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
