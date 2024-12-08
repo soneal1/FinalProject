@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameReview - Home</title>
+    <title>GamerView - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>GameReview</h1>
+        <h1>GamerView</h1>
         <div class="menu">
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
             <label for="menu-toggle" class="menu-icon">☰</label>
@@ -32,11 +32,24 @@
 
         <!-- Intro Section -->
         <section class="intro">
-            <h2>Welcome to GameReview!</h2>
-            <p>Stuck on which game to play next? Our website offers a library of nearly every game imaginable, complete with descriptions, user reviews, ratings, and more!</p>
+            <h2>Welcome to GamerView!</h2>
+            <p>Stuck on which game to play next? Our website offers reviews and information on the top games around the world!</p>
             <p>Create a personal profile to find games tailored to your interests!</p>
         </section>
 
+        <section class="search-bar-section">
+            <form class="search-form" action="#" method="get">
+                <input
+                    type="text"
+                    name="search"
+                    placeholder="Search for games..."
+                    class="search-input"
+                >
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </section>
+
+        
         <!-- Story Cards Section -->
         <section class="story-cards-section">
             <h2 class="section-title">Top Games of the Week</h2>
@@ -78,7 +91,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 GameReview</p>
+        <p>&copy; 2024 GamerView</p>
     </footer>
 </body>
 </html>
